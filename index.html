@@ -3,67 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASF Diário — ASF</title>
-<meta name="description" content="Diário de surf com registro de sessões, ondas e evolução">
+<title>ASF Diário — Diário de sessões de surf</title>
+<meta name="description" content="Registre suas sessões de surf, acompanhe estatísticas e evolução. Satélite do app ASF.">
 <style>
-:root{--rosa:#ff4d8d;--roxo:#7b2ff7;--areia:#fff5ec;--mar:#00c2cb}
+:root{--rosa:#e63970;--areia:#fff5ee;--mar:#0b6e6e;--escuro:#12303a}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
-body{background:linear-gradient(160deg,#fff5ec,#ffe3f1 60%,#e0f7fa);min-height:100vh;color:#333}
-header{background:linear-gradient(90deg,var(--rosa),var(--roxo));color:#fff;padding:2rem 1rem;text-align:center}
-header h1{font-size:2rem} header p{opacity:.9;margin-top:.4rem}
-nav{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;padding:.8rem;background:#fff;box-shadow:0 2px 8px #0001;position:sticky;top:0;z-index:10}
-nav a{background:var(--areia);border:1px solid #ffd3e6;color:#c2185b;padding:.3rem .7rem;border-radius:20px;font-size:.78rem;text-decoration:none}
-nav a:hover{background:var(--rosa);color:#fff}
-main{max-width:760px;margin:1.5rem auto;padding:0 1rem}
-.card{background:#fff;border-radius:16px;padding:1.4rem;box-shadow:0 4px 16px #7b2ff720;margin-bottom:1.2rem}
-.card h2{color:var(--roxo);margin-bottom:.6rem;font-size:1.2rem}
-button{background:linear-gradient(90deg,var(--rosa),var(--roxo));color:#fff;border:none;padding:.6rem 1.2rem;border-radius:24px;font-size:1rem;cursor:pointer}
-button:hover{opacity:.85}
-input,select,textarea{padding:.5rem;border:1px solid #ddd;border-radius:10px;width:100%;margin:.3rem 0;font-size:1rem}
-.xp{position:fixed;bottom:1rem;right:1rem;background:#fff;border:2px solid var(--rosa);border-radius:24px;padding:.4rem 1rem;font-weight:bold;color:var(--roxo);box-shadow:0 4px 12px #0002}
-footer{text-align:center;padding:2rem;font-size:.8rem;color:#888}
+body{background:var(--areia);color:var(--escuro)}
+header{background:linear-gradient(135deg,#4568dc,#b06ab3);color:#fff;padding:2.5rem 1rem;text-align:center}
+nav{background:var(--escuro);display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem;padding:.5rem;position:sticky;top:0;z-index:10}
+nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:.5rem;font-size:.85rem}
+nav a:hover,nav a.ativo{background:var(--rosa)}
+main{max-width:820px;margin:0 auto;padding:2rem 1rem}
+.card{background:#fff;border-radius:1rem;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.card h2{color:#4568dc;margin-bottom:.8rem}
+label{display:block;font-size:.85rem;margin-top:.7rem;color:#555}
+input,select,textarea{width:100%;padding:.6rem;border:2px solid #eee;border-radius:.5rem;margin-top:.2rem;font-size:1rem}
+button.salvar{background:var(--rosa);color:#fff;border:none;padding:.8rem 1.6rem;border-radius:2rem;font-size:1rem;cursor:pointer;margin-top:1rem}
+.stats{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:1rem}
+.stats div{background:var(--areia);border-radius:.75rem;padding:.8rem 1.2rem;text-align:center;min-width:100px}
+.stats strong{display:block;font-size:1.5rem;color:var(--mar)}
+.reg{background:var(--areia);border-radius:.75rem;padding:.9rem;margin:.5rem 0;display:flex;justify-content:space-between;align-items:center}
+.reg small{color:#777}
+.reg .del{background:none;border:none;cursor:pointer;color:var(--rosa);font-size:1.1rem}
+footer{background:var(--escuro);color:#cfe;padding:1.5rem;text-align:center;font-size:.85rem;margin-top:2rem}
+footer a{color:#ff9ec0}
 </style>
 </head>
 <body>
-<header><h1>📓 ASF Diário</h1><p>Diário de surf com registro de sessões, ondas e evolução</p></header>
-<nav><a href="https://acarolmourad-commits.github.io/asf-app/">🏄‍♀️ ASF App</a>
-<a href="https://acarolmourad-commits.github.io/asf-praias/">Praias</a>
-<a href="https://acarolmourad-commits.github.io/asf-previsao/">Previsao</a>
-<a href="https://acarolmourad-commits.github.io/asf-treino/">Treino</a>
-<a href="https://acarolmourad-commits.github.io/asf-eventos/">Eventos</a>
-<a href="https://acarolmourad-commits.github.io/asf-glossario/">Glossario</a>
-<a href="https://acarolmourad-commits.github.io/asf-seguranca/">Seguranca</a>
-<a href="https://acarolmourad-commits.github.io/asf-comunidade/">Comunidade</a>
-<a href="https://acarolmourad-commits.github.io/asf-equipamento/">Equipamento</a>
-<a href="https://acarolmourad-commits.github.io/asf-quiz/">Quiz</a>
-<a href="https://acarolmourad-commits.github.io/asf-nutricao/">Nutricao</a>
-<a href="https://acarolmourad-commits.github.io/asf-historia/">Historia</a>
-<a href="https://acarolmourad-commits.github.io/asf-viagens/">Viagens</a>
-<a href="https://acarolmourad-commits.github.io/asf-bemestar/">Bemestar</a>
-<a href="https://acarolmourad-commits.github.io/asf-eco/">Eco</a>
-<a href="https://acarolmourad-commits.github.io/asf-kids/">Kids</a>
-<a href="https://acarolmourad-commits.github.io/asf-mental/">Mental</a>
-<a href="https://acarolmourad-commits.github.io/asf-ranking/">Ranking</a>
-<a href="https://acarolmourad-commits.github.io/asf-respira/">Respira</a>
-<a href="https://acarolmourad-commits.github.io/asf-sos/">Sos</a>
-<a href="https://acarolmourad-commits.github.io/asf-volume/">Volume</a>
-<a href="https://acarolmourad-commits.github.io/asf-yoga/">Yoga</a></nav>
+<header><h1>📝 ASF Diário</h1><p>Registre suas sessões e veja sua evolução no surf</p></header>
+<nav>
+<a href="https://acarolmourad-commits.github.io/asf-app/">🏄‍♀️ App</a>
+<a href="https://acarolmourad-commits.github.io/asf-praias/">🏖️ Praias</a>
+<a href="https://acarolmourad-commits.github.io/asf-previsao/">🌊 Previsão</a>
+<a href="https://acarolmourad-commits.github.io/asf-treino/">💪 Treino</a>
+<a class="ativo" href="https://acarolmourad-commits.github.io/asf-diario/">📝 Diário</a>
+<a href="https://acarolmourad-commits.github.io/asf-yoga/">🧘‍♀️ Yoga</a>
+<a href="https://acarolmourad-commits.github.io/asf-eventos/">📅 Eventos</a>
+<a href="https://acarolmourad-commits.github.io/asf-glossario/">📖 Glossário</a>
+<a href="https://acarolmourad-commits.github.io/asf-comunidade/">🌸 Comunidade</a>
+<a href="https://acarolmourad-commits.github.io/asf-seguranca/">🛟 Segurança</a>
+<a href="https://acarolmourad-commits.github.io/asf-sos/">🆘 SOS</a>
+<a href="https://acarolmourad-commits.github.io/asf-equipamento/">🏄 Equipamento</a>
+<a href="https://acarolmourad-commits.github.io/asf-quiz/">❓ Quiz</a>
+<a href="https://acarolmourad-commits.github.io/asf-eco/">🌱 Eco</a>
+<a href="https://acarolmourad-commits.github.io/asf-mapa/">🗺️ Mapa</a>
+<a href="https://acarolmourad-commits.github.io/asf-mare/">🌙 Maré</a>
+<a href="https://acarolmourad-commits.github.io/asf-nutricao/">🥗 Nutrição</a>
+</nav>
 <main>
-<div class="card"><h2>Registrar sessão de hoje</h2>
-<label>Praia</label><input id="praia" placeholder="Praia Grande">
-<label>Altura das ondas</label><select id="ondas"><option>0.5m</option><option>1m</option><option>1.5m</option><option>2m+</option></select>
-<label>Como foi?</label><textarea id="nota" placeholder="Sensações, manobras, aprendizados..."></textarea>
-<button onclick="save()">Salvar sessão (+10 XP)</button></div>
-<div class="card"><h2>Minhas sessões</h2><div id="log"></div></div>
-<div class="card"><h2>🌐 Ecossistema ASF</h2><p>Este app faz parte da constelação ASF — Associação de Surf Feminino. Ganhe XP aqui e veja seu progresso no <a href="https://acarolmourad-commits.github.io/asf-ranking/">ASF Ranking</a>. App principal: <a href="https://acarolmourad-commits.github.io/asf-app/">ASF App</a>.</p></div>
+<div class="card"><h2>Suas estatísticas 📊</h2><div class="stats">
+<div><strong id="nSess">0</strong>Sessões</div><div><strong id="nOndas">0</strong>Ondas</div><div><strong id="tTotal">0h</strong>Tempo</div><div><strong id="mNota">–</strong>Nota média</div>
+</div></div>
+<div class="card"><h2>Nova sessão 🌊</h2>
+<label>Data</label><input type="date" id="data">
+<label>Praia / Pico</label><input type="text" id="praia" placeholder="Ex.: Praia Grande">
+<label>Duração (min)</label><input type="number" id="dur" min="1" placeholder="60">
+<label>Ondas pegas</label><input type="number" id="ondas" min="0" placeholder="10">
+<label>Nota da sessão (1–10)</label><input type="number" id="nota" min="1" max="10" placeholder="8">
+<label>Anotações</label><textarea id="obs" rows="2" placeholder="Como foi? O que melhorar?"></textarea>
+<button class="salvar" onclick="salvar()">Salvar sessão</button>
+<p style="margin-top:.7rem;font-size:.85rem;color:#777">💡 Antes de surfar, confira a <a href="https://acarolmourad-commits.github.io/asf-previsao/">Previsão</a> e a <a href="https://acarolmourad-commits.github.io/asf-mare/">Maré</a>, e aqueça com o <a href="https://acarolmourad-commits.github.io/asf-yoga/">ASF Yoga</a>.</p>
+</div>
+<div class="card"><h2>Histórico 🗂️</h2><div id="lista"></div></div>
 </main>
-<div class="xp">⭐ XP: <span id="xp">0</span></div>
-<footer>ASF — Associação de Surf Feminino · Feito com 🌊 e 💜 · <a href="https://acarolmourad-commits.github.io/asf-app/">asf-app</a></footer>
+<footer>Parte do ecossistema <a href="https://acarolmourad-commits.github.io/asf-app/">ASF — Associação de Surf Feminino</a> · Publicado via GitHub Pages</footer>
 <script>
-const XP=()=>parseInt(localStorage.getItem('asf_xp')||'0');
-function addXP(n){localStorage.setItem('asf_xp',XP()+n);document.getElementById('xp').textContent=XP();}
-document.getElementById('xp').textContent=XP();
-function render(){const l=JSON.parse(localStorage.getItem('asf_diario')||'[]');document.getElementById('log').innerHTML=l.length?l.map(s=>`<p>🌊 <b>${s.praia}</b> — ${s.ondas} — ${s.data}<br><i>${s.nota}</i></p><hr>`).join(''):'Nenhuma sessão ainda. Bora pro mar!';}function save(){const s={praia:document.getElementById('praia').value||'Praia',ondas:document.getElementById('ondas').value,nota:document.getElementById('nota').value,data:new Date().toLocaleDateString('pt-BR')};const l=JSON.parse(localStorage.getItem('asf_diario')||'[]');l.unshift(s);localStorage.setItem('asf_diario',JSON.stringify(l));render();addXP(10);}render();
+let regs=JSON.parse(localStorage.getItem('asfdiario')||'[]');
+document.getElementById('data').valueAsDate=new Date();
+function salvar(){
+ const r={data:document.getElementById('data').value,praia:document.getElementById('praia').value||'—',
+ dur:+document.getElementById('dur').value||0,ondas:+document.getElementById('ondas').value||0,
+ nota:+document.getElementById('nota').value||null,obs:document.getElementById('obs').value};
+ if(!r.data){alert('Informe a data');return;}
+ regs.unshift(r);localStorage.setItem('asfdiario',JSON.stringify(regs));render();
+ ['praia','dur','ondas','nota','obs'].forEach(id=>document.getElementById(id).value='');
+}
+function del(i){regs.splice(i,1);localStorage.setItem('asfdiario',JSON.stringify(regs));render();}
+function render(){
+ const n=regs.length,o=regs.reduce((s,r)=>s+r.ondas,0),t=regs.reduce((s,r)=>s+r.dur,0);
+ const notas=regs.filter(r=>r.nota),m=notas.length?(notas.reduce((s,r)=>s+r.nota,0)/notas.length).toFixed(1):'–';
+ document.getElementById('nSess').textContent=n;document.getElementById('nOndas').textContent=o;
+ document.getElementById('tTotal').textContent=Math.round(t/60*10)/10+'h';document.getElementById('mNota').textContent=m;
+ document.getElementById('lista').innerHTML=regs.map((r,i)=>`<div class="reg"><div><strong>${r.praia}</strong> — ${r.data}<br><small>⏱ ${r.dur}min · 🌊 ${r.ondas} ondas${r.nota?' · ⭐ '+r.nota:''}${r.obs?' · '+r.obs:''}</small></div><button class="del" onclick="del(${i})">🗑</button></div>`).join('')||'<p style="color:#777">Nenhuma sessão registrada ainda.</p>';
+}
+render();
 </script>
 </body>
 </html>
