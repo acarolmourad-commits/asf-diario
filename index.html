@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASF Diário — Diário de sessões de surf</title>
-<meta name="description" content="Registre suas sessões de surf, acompanhe estatísticas e evolução. Satélite do app ASF.">
+<title>ASF Diário — Diário de sessões de surf com guia didático</title>
+<meta name="description" content="Registre suas sessões de surf com condições reais (ondas, vento, maré, prancha), aprenda a ler o mar do litoral norte de SP e acompanhe sua evolução. Satélite do app ASF.">
 <link rel="canonical" href="https://acarolmourad-commits.github.io/asf-diario/">
 <!-- ========== SEO Padrão Google (rede ASF) ========== -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -14,42 +14,54 @@
 <meta name="theme-color" content="#ff4d8d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ASF — Associação de Surf Feminino">
-<meta property="og:title" content="ASF Diário — Diário de sessões de surf">
-<meta property="og:description" content="Registre suas sessões de surf, acompanhe estatísticas e evolução. Satélite do app ASF.">
+<meta property="og:title" content="ASF Diário — Diário de sessões de surf com guia didático">
+<meta property="og:description" content="Registre suas sessões de surf com condições reais, aprenda a ler o mar do litoral norte de SP e acompanhe sua evolução.">
 <meta property="og:url" content="https://acarolmourad-commits.github.io/asf-diario/">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:title" content="ASF Diário — Diário de sessões de surf">
-<meta name="twitter:description" content="Registre suas sessões de surf, acompanhe estatísticas e evolução. Satélite do app ASF.">
+<meta name="twitter:description" content="Registre suas sessões, aprenda a ler o mar e acompanhe sua evolução no surf.">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ASF App","item":"https://acarolmourad-commits.github.io/asf-app/"},{"@type":"ListItem","position":2,"name":"ASF Diário — Diário de sessões de surf","item":"https://acarolmourad-commits.github.io/asf-diario/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Por que registrar minhas sessões de surf?","acceptedAnswer":{"@type":"Answer","text":"Anotar condições (swell, vento, maré), prancha usada e sensações ajuda a identificar padrões: você descobre em que condições surfa melhor e acompanha sua evolução ao longo do tempo."}},{"@type":"Question","name":"O que anotar em cada sessão de surf?","acceptedAnswer":{"@type":"Answer","text":"Data, pico, altura e período das ondas, vento, maré, prancha, tempo de sessão e uma nota pessoal. Cruzar com a ASF Previsão mostra como as condições afetaram sua performance."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Por que registrar minhas sessões de surf?","acceptedAnswer":{"@type":"Answer","text":"Anotar condições (swell, vento, maré), prancha usada e sensações ajuda a identificar padrões: você descobre em que condições surfa melhor, qual prancha rende mais em cada mar e acompanha sua evolução ao longo das temporadas."}},{"@type":"Question","name":"O que anotar em cada sessão de surf?","acceptedAnswer":{"@type":"Answer","text":"Data, pico, altura e período das ondas, vento (offshore, onshore ou terral), maré (enchendo, cheia, vazando, seca), prancha usada, tempo de sessão, número de ondas e uma nota pessoal. Cruzar com a ASF Previsão mostra como as condições afetaram sua performance."}},{"@type":"Question","name":"Qual a melhor época para surfar no litoral norte de SP?","acceptedAnswer":{"@type":"Answer","text":"Outono e inverno (abril a setembro) trazem os swells de sul e sudeste mais consistentes, gerados por frentes frias, com vento terral frequente pela manhã. No verão predominam marolas de leste/nordeste, menores e menos organizadas, mas boas para iniciantes e longboard."}},{"@type":"Question","name":"O que é vento terral e por que ele é bom para o surf?","acceptedAnswer":{"@type":"Answer","text":"Terral é o vento fraco que sopra da terra para o mar no início da manhã, comum no litoral norte de SP. Ele deixa a superfície do mar lisa (o chamado 'glass') e segura a parede da onda, criando as melhores condições do dia — geralmente entre 6h e 9h."}},{"@type":"Question","name":"Como a maré influencia os picos do litoral norte?","acceptedAnswer":{"@type":"Answer","text":"De forma geral, picos de fundo de areia como Maresias e Baleia funcionam bem com maré enchendo; bancos mais rasos podem fechar demais na maré cheia. Luas cheia e nova geram marés de sizígia (maiores amplitudes). Anote a maré de cada sessão no diário para descobrir o padrão do seu pico favorito."}}]}
 </script>
 <!-- ========== Fim SEO ========== -->
 
 <style>
-:root{--rosa:#e63970;--areia:#fff5ee;--mar:#0b6e6e;--escuro:#12303a}
+:root{--rosa:#e63970;--areia:#fff5ee;--mar:#0b6e6e;--escuro:#12303a;--azul:#4568dc}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
 body{background:var(--areia);color:var(--escuro)}
 header{background:linear-gradient(135deg,#4568dc,#b06ab3);color:#fff;padding:2.5rem 1rem;text-align:center}
-nav{background:var(--escuro);display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem;padding:.5rem;position:sticky;top:0;z-index:10}
-nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:.5rem;font-size:.85rem}
-nav a:hover,nav a.ativo{background:var(--rosa)}
-main{max-width:820px;margin:0 auto;padding:2rem 1rem}
+header p{max-width:640px;margin:.5rem auto 0;opacity:.95}
+main{max-width:860px;margin:0 auto;padding:2rem 1rem}
 .card{background:#fff;border-radius:1rem;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.07)}
-.card h2{color:#4568dc;margin-bottom:.8rem}
+.card h2{color:var(--azul);margin-bottom:.8rem}
+.card h3{color:var(--mar);margin:1rem 0 .4rem;font-size:1rem}
 label{display:block;font-size:.85rem;margin-top:.7rem;color:#555}
 input,select,textarea{width:100%;padding:.6rem;border:2px solid #eee;border-radius:.5rem;margin-top:.2rem;font-size:1rem}
 button.salvar{background:var(--rosa);color:#fff;border:none;padding:.8rem 1.6rem;border-radius:2rem;font-size:1rem;cursor:pointer;margin-top:1rem}
+button.sec{background:#fff;color:var(--azul);border:2px solid var(--azul);padding:.5rem 1rem;border-radius:2rem;font-size:.85rem;cursor:pointer;margin-top:.6rem;margin-right:.4rem}
 .stats{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:1rem}
 .stats div{background:var(--areia);border-radius:.75rem;padding:.8rem 1.2rem;text-align:center;min-width:100px}
 .stats strong{display:block;font-size:1.5rem;color:var(--mar)}
 .reg{background:var(--areia);border-radius:.75rem;padding:.9rem;margin:.5rem 0;display:flex;justify-content:space-between;align-items:center}
 .reg small{color:#777}
 .reg .del{background:none;border:none;cursor:pointer;color:var(--rosa);font-size:1.1rem}
+.passo{display:flex;gap:.8rem;margin:.7rem 0;align-items:flex-start}
+.passo .num{background:var(--rosa);color:#fff;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+table.guia{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:.5rem}
+table.guia th,table.guia td{padding:.5rem;border-bottom:1px solid #eee;text-align:left}
+table.guia th{color:var(--mar);font-size:.75rem;text-transform:uppercase}
+.glos dt{font-weight:700;color:var(--azul);margin-top:.6rem}
+.glos dd{font-size:.9rem;color:#444;margin-left:0}
+.faq details{background:#fff;border-radius:.75rem;padding:.9rem;margin:.5rem 0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.faq summary{font-weight:600;cursor:pointer;color:var(--escuro)}
+.faq p{margin-top:.5rem;font-size:.92rem;color:#444;line-height:1.55}
 footer{background:var(--escuro);color:#cfe;padding:1.5rem;text-align:center;font-size:.85rem;margin-top:2rem}
 footer a{color:#ff9ec0}
+a{color:var(--azul)}
+.dica{background:#eef4ff;border-left:4px solid var(--azul);border-radius:.5rem;padding:.7rem .9rem;font-size:.88rem;margin-top:.8rem}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"ASF Diário","url":"https://acarolmourad-commits.github.io/asf-diario/","applicationCategory":"SportsApplication","operatingSystem":"Web","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"ASF — Associação Surf Feminino","url":"https://acarolmourad-commits.github.io/asf-app/"}}
@@ -62,27 +74,96 @@ footer a{color:#ff9ec0}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1643806355443576" crossorigin="anonymous"></script>
 </head>
 <body>
-<header><h1>📝 ASF Diário</h1><p>Registre suas sessões e veja sua evolução no surf</p></header>
+<header><h1>📝 ASF Diário</h1><p>Registre suas sessões, aprenda a ler o mar do litoral norte de SP e veja sua evolução temporada a temporada.</p></header>
 
 <main>
+
+<!-- GUIA RÁPIDO -->
+<div class="card"><h2>📖 Como usar seu diário (passo a passo)</h2>
+<div class="passo"><div class="num">1</div><div><b>Antes de entrar na água:</b> confira a <a href="https://acarolmourad-commits.github.io/asf-previsao/">ASF Previsão</a> (ondas, vento e temperatura) e a <a href="https://acarolmourad-commits.github.io/asf-mare/">ASF Maré</a>. Anote mentalmente a previsão.</div></div>
+<div class="passo"><div class="num">2</div><div><b>Durante a sessão:</b> conte suas ondas (ou estime) e observe o vento: está terral (liso), offshore, side ou onshore?</div></div>
+<div class="passo"><div class="num">3</div><div><b>Ao sair:</b> registre tudo aqui em menos de 1 minuto — data, pico, condições, prancha e uma nota honesta de 1 a 10.</div></div>
+<div class="passo"><div class="num">4</div><div><b>A cada 10 sessões:</b> revise o histórico e procure padrões: em que maré você surfa melhor? Qual prancha rendeu mais no marol de verão?</div></div>
+<div class="dica">💡 Diário + previsão = aprendizado acelerado. Quem anota evolui mais rápido porque transforma cada sessão em dados.</div>
+</div>
+
+<!-- STATS -->
 <div class="card"><h2>Suas estatísticas 📊</h2><div class="stats">
 <div><strong id="nSess">0</strong>Sessões</div><div><strong id="nOndas">0</strong>Ondas</div><div><strong id="tTotal">0h</strong>Tempo</div><div><strong id="mNota">–</strong>Nota média</div>
-</div></div>
+</div>
+<button class="sec" onclick="exportCSV()">⬇ Exportar CSV</button>
+<button class="sec" onclick="exportJSON()">⬇ Backup JSON</button>
+<button class="sec" onclick="importJSON()">⬆ Restaurar backup</button>
+<input type="file" id="impFile" accept=".json" style="display:none" onchange="doImport(event)">
+</div>
+
+<!-- FORM -->
 <div class="card"><h2>Nova sessão 🌊</h2>
 <label>Data</label><input type="date" id="data">
-<label>Praia / Pico</label><input type="text" id="praia" placeholder="Ex.: Praia Grande">
+<label>Praia / Pico</label>
+<select id="praia">
+<option value="">Escolha ou descreva nas anotações…</option>
+<option>Praia Grande (Ubatuba)</option><option>Toninhas (Ubatuba)</option><option>Itamambuca (Ubatuba)</option>
+<option>Vermelha do Norte (Ubatuba)</option><option>Enseada (Ubatuba)</option><option>Maresias (São Sebastião)</option>
+<option>Baleia (São Sebastião)</option><option>Cambury (São Sebastião)</option><option>Juquehy (São Sebastião)</option>
+<option>Barra do Una (São Sebastião)</option><option>Paúba (São Sebastião)</option><option>Guaecá (São Sebastião)</option>
+<option>Barra do Sahy (São Sebastião)</option><option>Praia Brava (Caraguatatuba)</option><option>Cocanha (Caraguatatuba)</option>
+<option>Ilhabela — Castelhanos/Bonete</option><option>Outro (descreva nas anotações)</option>
+</select>
+<label>Tamanho das ondas</label>
+<select id="tam"><option value="">—</option><option>0,5 m (marolinha)</option><option>0,5–1 m (marol)</option><option>1–1,5 m</option><option>1,5–2 m (grande)</option><option>+2 m (série pesada)</option></select>
+<label>Vento</label>
+<select id="vento"><option value="">—</option><option>Terral (manhã, mar liso)</option><option>Offshore (terra → mar)</option><option>Fraco/variável</option><option>Side shore (lateral)</option><option>Onshore (mar → terra, mar picado)</option></select>
+<label>Maré</label>
+<select id="mare"><option value="">—</option><option>Seca (baixa)</option><option>Enchendo</option><option>Cheia (alta)</option><option>Vazando</option></select>
+<label>Prancha usada</label>
+<select id="prancha"><option value="">—</option><option>Longboard (9'+)</option><option>Funboard / Evolution (7'–8')</option><option>Fish (5'–6'6)</option><option>Shortboard (performance)</option><option>Stand up paddle</option><option>Bodyboard</option></select>
 <label>Duração (min)</label><input type="number" id="dur" min="1" placeholder="60">
 <label>Ondas pegas</label><input type="number" id="ondas" min="0" placeholder="10">
 <label>Nota da sessão (1–10)</label><input type="number" id="nota" min="1" max="10" placeholder="8">
-<label>Anotações</label><textarea id="obs" rows="2" placeholder="Como foi? O que melhorar?"></textarea>
+<label>Anotações</label><textarea id="obs" rows="2" placeholder="Ex.: drop mais fundo funcionando; remada cansou no final; melhor série na maré enchendo"></textarea>
 <button class="salvar" onclick="salvar()">Salvar sessão</button>
 <p style="margin-top:.7rem;font-size:.85rem;color:#777">💡 Antes de surfar, confira a <a href="https://acarolmourad-commits.github.io/asf-previsao/">Previsão</a> e a <a href="https://acarolmourad-commits.github.io/asf-mare/">Maré</a>, e aqueça com o <a href="https://acarolmourad-commits.github.io/asf-yoga/">ASF Yoga</a>.</p>
 </div>
+
+<!-- HISTÓRICO -->
 <div class="card"><h2>Histórico 🗂️</h2><div id="lista"></div></div>
-<section class="faq">
+
+<!-- CONTEÚDO DIDÁTICO -->
+<div class="card"><h2>🌊 Aprenda a ler o mar do litoral norte</h2>
+
+<h3>As estações do surf no litoral norte de SP</h3>
+<table class="guia">
+<tr><th>Época</th><th>Swell dominante</th><th>Condições típicas</th></tr>
+<tr><td>Outono/Inverno (abr–set)</td><td>S / SSE (frentes frias)</td><td>Ondas maiores e organizadas, terral frequente de manhã, água 19–22°C (neoprene 3/2mm)</td></tr>
+<tr><td>Primavera (out–dez)</td><td>SSE / E variável</td><td>Transição: boas sessões entre frentes, água esquentando</td></tr>
+<tr><td>Verão (dez–mar)</td><td>E / NE (marol)</td><td>Ondas menores e menos constantes, vento de leste à tarde, água 24–26°C (lycra basta)</td></tr>
+</table>
+
+<h3>Vento: o fator que mais muda o mar no mesmo dia</h3>
+<p style="font-size:.92rem;line-height:1.55">No litoral norte, o <b>terral</b> (vento fraco da madrugada que sopra da terra para o mar) costuma deixar o mar liso até ~9h. Depois entra a brisa de leste/sudeste, que pica o mar nos picos expostos. Por isso a regra local é: <b>quanto mais cedo, melhor</b>. Picos abertos a leste (Maresias, Baleia) sofrem mais com o vento SE; picos de costão podem ficar protegidos.</p>
+
+<h3>Maré: cada pico tem seu horário</h3>
+<p style="font-size:.92rem;line-height:1.55">Picos de areia (beach breaks) como Maresias, Baleia e Juquehy costumam render melhor na <b>maré enchendo</b>. Na cheia, alguns bancos rasos fecham tudo de uma vez; na seca, a onda pode ficar cavada e rápida demais para iniciantes. Luas cheia e nova = <b>sizígia</b> (marés maiores); luas de quarto = <b>quadratura</b> (amplitude menor). Anote a maré de toda sessão — em 1 mês você descobre o padrão do seu pico.</p>
+
+<h3>Mini glossário</h3>
+<dl class="glos">
+<dt>Período do swell</dt><dd>Intervalo entre ondas, em segundos. Acima de 10–12s = swell de fundo (ondas potentes e organizadas). Abaixo de 8s = marol de vento.</dd>
+<dt>Offshore / Onshore</dt><dd>Vento da terra para o mar (bom: segura a parede da onda) vs. do mar para a terra (ruim: desmancha a onda).</dd>
+<dt>Glass</dt><dd>Mar liso, sem textura de vento — típico das manhãs de terral.</dd>
+<dt>Maré de sizígia</dt><dd>Luas cheia e nova: marés mais altas e mais baixas do mês.</dd>
+<dt>Set / série</dt><dd>Grupo de ondas maiores que chega de tempos em tempos. Conte seus sets no diário para medir paciência e posicionamento.</dd>
+</dl>
+</div>
+
+<!-- FAQ -->
+<section class="faq card">
 <h2>Perguntas frequentes</h2>
-<details><summary>Por que registrar minhas sessões de surf?</summary><p>Anotar condições (swell, vento, maré), prancha usada e sensações ajuda a identificar padrões: você descobre em que condições surfa melhor e acompanha sua evolução ao longo do tempo.</p></details>
-<details><summary>O que anotar em cada sessão de surf?</summary><p>Data, pico, altura e período das ondas, vento, maré, prancha, tempo de sessão e uma nota pessoal. Cruzar com a ASF Previsão mostra como as condições afetaram sua performance.</p></details>
+<details><summary>Por que registrar minhas sessões de surf?</summary><p>Anotar condições (swell, vento, maré), prancha usada e sensações ajuda a identificar padrões: você descobre em que condições surfa melhor, qual prancha rende mais em cada mar e acompanha sua evolução ao longo das temporadas.</p></details>
+<details><summary>O que anotar em cada sessão de surf?</summary><p>Data, pico, altura e período das ondas, vento (offshore, onshore ou terral), maré, prancha usada, tempo de sessão, número de ondas e uma nota pessoal. Cruzar com a ASF Previsão mostra como as condições afetaram sua performance.</p></details>
+<details><summary>Qual a melhor época para surfar no litoral norte de SP?</summary><p>Outono e inverno (abril a setembro) trazem os swells de sul e sudeste mais consistentes, com terral frequente pela manhã. No verão predominam marolas de leste/nordeste, menores mas boas para iniciantes e longboard.</p></details>
+<details><summary>O que é vento terral e por que ele é bom?</summary><p>Terral é o vento fraco que sopra da terra para o mar no início da manhã. Ele deixa o mar liso ("glass") e segura a parede da onda — as melhores condições do dia, geralmente entre 6h e 9h.</p></details>
+<details><summary>Meus dados ficam salvos onde?</summary><p>Tudo fica no navegador do seu dispositivo (localStorage) — nada é enviado a servidores. Use "Backup JSON" para guardar uma cópia e "Restaurar" se trocar de aparelho.</p></details>
 </section>
 </main>
 <footer>Parte do ecossistema <a href="https://acarolmourad-commits.github.io/asf-app/">ASF — Associação de Surf Feminino</a> · Publicado via GitHub Pages</footer>
@@ -90,20 +171,35 @@ footer a{color:#ff9ec0}
 let regs=JSON.parse(localStorage.getItem('asfdiario')||'[]');
 document.getElementById('data').valueAsDate=new Date();
 function salvar(){
- const r={data:document.getElementById('data').value,praia:document.getElementById('praia').value||'—',
- dur:+document.getElementById('dur').value||0,ondas:+document.getElementById('ondas').value||0,
- nota:+document.getElementById('nota').value||null,obs:document.getElementById('obs').value};
+ const g=id=>document.getElementById(id).value;
+ const r={data:g('data'),praia:g('praia')||'—',tam:g('tam'),vento:g('vento'),mare:g('mare'),prancha:g('prancha'),
+ dur:+g('dur')||0,ondas:+g('ondas')||0,nota:+g('nota')||null,obs:g('obs')};
  if(!r.data){alert('Informe a data');return;}
  regs.unshift(r);localStorage.setItem('asfdiario',JSON.stringify(regs));render();
- ['praia','dur','ondas','nota','obs'].forEach(id=>document.getElementById(id).value='');
+ ['tam','vento','mare','prancha','dur','ondas','nota','obs'].forEach(id=>document.getElementById(id).value='');
 }
 function del(i){regs.splice(i,1);localStorage.setItem('asfdiario',JSON.stringify(regs));render();}
+function linha(r){
+ return [r.tam,r.vento,r.mare,r.prancha].filter(Boolean).join(' · ');
+}
 function render(){
  const n=regs.length,o=regs.reduce((s,r)=>s+r.ondas,0),t=regs.reduce((s,r)=>s+r.dur,0);
  const notas=regs.filter(r=>r.nota),m=notas.length?(notas.reduce((s,r)=>s+r.nota,0)/notas.length).toFixed(1):'–';
  document.getElementById('nSess').textContent=n;document.getElementById('nOndas').textContent=o;
  document.getElementById('tTotal').textContent=Math.round(t/60*10)/10+'h';document.getElementById('mNota').textContent=m;
- document.getElementById('lista').innerHTML=regs.map((r,i)=>`<div class="reg"><div><strong>${r.praia}</strong> — ${r.data}<br><small>⏱ ${r.dur}min · 🌊 ${r.ondas} ondas${r.nota?' · ⭐ '+r.nota:''}${r.obs?' · '+r.obs:''}</small></div><button class="del" onclick="del(${i})">🗑</button></div>`).join('')||'<p style="color:#777">Nenhuma sessão registrada ainda.</p>';
+ document.getElementById('lista').innerHTML=regs.map((r,i)=>`<div class="reg"><div><strong>${r.praia}</strong> — ${r.data}<br><small>⏱ ${r.dur}min · 🌊 ${r.ondas} ondas${r.nota?' · ⭐ '+r.nota:''}${linha(r)?'<br>'+linha(r):''}${r.obs?'<br>📝 '+r.obs:''}</small></div><button class="del" onclick="del(${i})">🗑</button></div>`).join('')||'<p style="color:#777">Nenhuma sessão registrada ainda. Registre a primeira acima! 👆</p>';
+}
+function dl(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();}
+function exportCSV(){
+ const head='data;praia;tamanho;vento;mare;prancha;duracao_min;ondas;nota;obs';
+ const rows=regs.map(r=>[r.data,r.praia,r.tam||'',r.vento||'',r.mare||'',r.prancha||'',r.dur,r.ondas,r.nota||'',(r.obs||'').replace(/[\n,;]/g,' ')].join(';'));
+ dl('asf-diario.csv',[head,...rows].join('\n'),'text/csv');
+}
+function exportJSON(){dl('asf-diario-backup.json',JSON.stringify(regs,null,2),'application/json');}
+function importJSON(){document.getElementById('impFile').click();}
+function doImport(e){
+ const f=e.target.files[0];if(!f)return;
+ const rd=new FileReader();rd.onload=()=>{try{const d=JSON.parse(rd.result);if(Array.isArray(d)){regs=d;localStorage.setItem('asfdiario',JSON.stringify(regs));render();alert('Backup restaurado: '+d.length+' sessões.');}else alert('Arquivo inválido.');}catch(err){alert('Erro ao ler o arquivo.');}};rd.readAsText(f);
 }
 render();
 </script>
